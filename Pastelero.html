@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pedidos</title>
+<link rel="icon" href="https://github.com/BernardoEspinoza02/HTML-Practica/blob/main/Imagenes/Logo.png?raw=true">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body{
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        margin: 0px;
+    }
+
+
+    /*Estitlo de encabezado*/
+    a{
+        text-decoration: none;
+        color:#242e81;
+        align-items: baseline;      
+    }
+
+    header {
+        display: flex;
+        height: 200px;
+        background-color:#df68d5;
+        justify-content:flex-start;
+        align-items:center;
+        padding:10px;/*es el espacio en el marco de los elementos*/
+        margin: 0 auto;
+        text-align: center;
+        color:rgb(255, 255, 255);
+    }
+
+    .logo{
+        display: flex;
+    }
+
+    .logo img{
+        height: 170px;
+        margin-right: 300px;
+
+    }
+
+    h2{
+        font-size: 40px;
+        text-align: center;
+        color: #fcfcfc;
+    }
+
+    h3{
+        color: rgb(93, 10, 187);
+    }
+    
+
+    nav a{
+        font-size: 17px; 
+        font-weight: 800;
+        padding-right: 90px;
+    }
+
+    nav a:hover{
+        color:rgb(83, 23, 23); 
+    }
+
+    div.desc {
+        padding: 30px;
+        text-align: center;
+        font-size: 25px;
+        color: #242e81;
+    }
+/*columan de dos*/
+    div.columna1 {
+        margin: 10px;
+        border: 2px solid #911196;
+        border-radius: 8px;
+        float: left;
+        width: 35%;
+        background-color: #a3029683;
+    }
+
+    div.columna1{
+        font-size: 25px;
+        color: aliceblue;
+    }
+    div.columna2 {
+        margin: 10px;
+        border: 2px solid #3d3d3d;
+        border-radius: 8px;
+        float: left;
+        width: 60%;
+        height: 1200px;
+        background-color: #7a4b8db2;
+    }
+
+    div.columna2{
+        align-content: center;
+    }
+
+
+    /*Tablas de Presios y Sabores*/
+    table, tr, td{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: rgb(7, 247, 235);
+        border: 1px solid rgba(255, 255, 255, 0.596);
+        border-radius: 10px;
+        
+
+    }
+    tr{
+        font-size: 15px;
+        color: #3d3d3d;
+    }
+    th, td{
+        text-align: center;
+        background-color:#af50a728;
+        border-radius: 10px;
+    }
+
+
+
+
+    /*stylo del pie de pagina*/
+    footer{
+       /* background-color: darkgreen;*/
+        padding: 5px;
+        text-align: center;
+    }
+
+    .pie_pagina{
+        width: 100%;
+        background-color: #df68d5;
+    }
+
+    .pie_pagina .grupo1{
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        display:grid;
+        grid-template-columns:repeat(3, 1fr);/*divicion de tres columnas*/
+        grid-gap:50px;
+        padding: 10px 0px;
+
+    }
+
+    .pie_pagina .grupo1 .box figure{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+    }
+
+    .pie_pagina .grupo1 .box .figure img{
+        width: 100px;
+    }
+
+    .pie_pagina .grupo1 .box h2{
+        color: rgb(116, 29, 29);
+        margin-bottom: 30px;
+        font-size: 25px;
+    }
+
+    .pie_pagina .grupo1 .box p{
+        color:#dddddd;
+        margin-bottom: 10px;
+    }
+
+    .pie_pagina .grupo1 .red-social a{
+        display: inline-block;
+        text-decoration: none;
+        width: 40px;
+        height: 40px;
+        line-height: 45px;
+        color:aliceblue;
+        margin-right: 10px;
+        background-color: rgb(240, 10, 40);
+    }
+
+    .pie_pagina .grupo2{
+        background-color:#b862b1;
+        padding: 15px 10px;
+        text-align: center;
+        color: rgb(253, 253, 253);
+        }
+
+    .pie_pagina .grupo2 small{
+        font-size: 18px;
+    }
+
+
+
+/*hace que las columnas se apilen en un cambio de pantalla mas pequena*/
+@media (max-wigth: 600px) {
+    nav, article, header{
+        width: 100%;
+        height:auto;
+    }
+}
+</style>
+</head>
+<body background="https://raw.githubusercontent.com/BernardoEspinoza02/HTML-Practica/437cdeb9d7f1514e79d23457871d7d2104cc0a69/Imagenes/fondo.jpg">
+    <header>
+        <a href="#" class="logo">
+            <img src="https://github.com/BernardoEspinoza02/HTML-Practica/blob/main/Imagenes/Logo.png?raw=true" alt="logo">      
+        </a>
+        <p style="font-size: 100px;">Pedidos</p>
+<!--Encabezado-->
+    </header>
+    <hr color="#470542" size="6px">
+    <nav style="text-align: end;">
+        <a href=".\Pasteleria2.html">Inicio</a>|
+        <a href=".\Pastelero.html">Pastelero</a>|
+        <a href="C:\Users\BERNARDO\Desktop\Pasteleria\Formulario.html">Haslo tu mismo</a>|
+        <a href="#">Contato</a>
+    </nav>
+    <hr color="#470542" size="6px">
+
+    <div class="columna1">
+        <h2>Inventario</h2>
+        <h3>Sabor del Pan</h3>
+        <label for="Chocolate">Chocolate</label>
+        <meter id="chocolate" value="80" min="0" max="100">80 de 100</meter><br>
+
+        <label for="Vainilla">Vainilla</label>
+        <meter id="Vainilla" value="50" min="0" max="100">80 de 100</meter><br>
+
+        <label for="FrutosRojos">Frutos Rojos</label>
+        <meter id="FrutosRojos" value="30" min="0" max="100">80 de 100</meter><br>
+
+        <label for="Napolitano">Napolitano</label>
+        <meter id="Napolitano" value="100" min="0" max="100">80 de 100</meter><br><br>
+
+
+        <h3>Sabor del Relleno</h3>
+
+        <label for="Ferrero">Ferrero</label>
+        <meter id="Ferrero" value="60" min="0" max="100">60 de 100</meter><br>
+
+        <label for="fresa">Fresa</label>
+        <meter id="fresa" value="50" min="0" max="100">50 de 100</meter><br>
+
+        <label for="Durazno">Durazno</label>
+        <meter id="Durazno" value="38" min="0" max="100">38 de 100</meter><br>
+
+        <label for="Amareto">Amareto</label>
+        <meter id="Amareto" value="100" min="0" max="100">100 de 100</meter><br>
+
+        <label for="Frambuesa">Frambuesa</label>
+        <meter id="Frambuesa" value="18" min="0" max="100">18 de 100</meter><br>
+
+        <h3>Humedad del Pan</h3>
+
+        <label for="Cafe">Cafe</label>
+        <meter id="Cafe" value="40" min="0" max="100">40 de 100</meter><br>
+
+        <label for="Envinado">Envinado</label>
+        <meter id="Envinado" value="50" min="0" max="100">50 de 100</meter><br>
+
+        <label for="Tresleches">Tres Leches</label>
+        <meter id="Tresleches" value="38" min="0" max="100">38 de 100</meter><br>
+
+        <h3>Cubierta</h3>
+
+        <label for="chantilly">Chantilly</label>
+        <meter id="chantilly" value="35" min="0" max="100">35 de 100</meter><br>
+
+        <label for="chocolate">Chocolate</label>
+        <meter id="chocolate" value="30" min="0" max="100">30 de 100</meter><br>
+
+        <label for="Fondan">Fondan</label>
+        <meter id="Fondan" value="38" min="0" max="100">38 de 100</meter><br>
+
+        <h3>Decoración</h3>
+
+        <label for="FrutosRojos">Frutos Rojos</label>
+        <meter id="FrutosRojos" value="0" min="0" max="100">0 de 100</meter><br>
+
+        <label for="Cereza">Cereza</label>
+        <meter id="Cereza" value="50" min="0" max="100">50 de 100</meter><br>
+
+        <label for="Chocolateblanco">Chocolate Blanco</label>
+        <meter id="Chocolateblanco" value="90" min="0" max="100">90 de 100</meter><br>
+
+        <label for="Galletas">Galletas</label>
+        <meter id="Galletas" value="10" min="0" max="100">10 de 100</meter><br>
+
+        <label for="Chocolateobscuro">Chocolate Obscuro</label>
+        <meter id="Chocolateobscuro" value="78" min="0" max="100">78 de 100</meter><br><br><br>
+
+
+    </div>
+    <div class="columna2">
+        <h2>Pedidos</h2>
+    
+        <table>
+            <tr>
+                <th>Nombre de Cliente </th>
+                <th>Telefono</th>
+                <th>Correo</th>
+                <th>Tamaño</th>
+                <th>Sabor Pan</th>
+                <th>Relleno</th>
+                <th>Humedad</th>
+                <th>Cubierta</th>
+                <th>Decoracion</th>
+            </tr>
+            <tr>
+                <td>Jose Carmona</td>
+                <td>55 1023 2344</td>
+                <td>jo_car4@gmail.com</td>
+                <td>chico</td>
+                <td>Chocolate</td>
+                <td>Amareto</td>
+                <td>nada</td>
+                <td>Chocolate</td>
+                <td>Galletas</td>
+            </tr>
+            <tr>
+                <td>karla Ramos</td>
+                <td>55 3223 4344</td>
+                <td>karla4@gmail.com</td>
+                <td>Grande</td>
+                <td>Vainilla</td>
+                <td>Fresa</td>
+                <td>Tres Leches</td>
+                <td>Chantilly</td>
+                <td>Cereza</td>
+            </tr>
+            <tr>
+                <td>Ramon Zoto</td>
+                <td>38 1023 4544</td>
+                <td>ramon4@hotmail.com</td>
+                <td>mediano</td>
+                <td>Napolitano</td>
+                <td>Amareto</td>
+                <td>Cafe</td>
+                <td>Chantilly</td>
+                <td>Cereza</td>
+            </tr>
+        </table>
+
+
+    </div>
+  
+    <a href="C:/Users/BERNARDO/Desktop/Pasteleria/Pasteleria2.html">
+    <input type="button" value="Terminar Sesion">
+    </a>
+    <br><br><br><br>
+
+
+
+    <!--Pie de pagina-->
+    <footer class="pie_pagina">
+        <div class="grupo1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="https://github.com/BernardoEspinoza02/HTML-Practica/blob/main/Imagenes/Logo.png?raw=true" alt="logo" width="150" height="150">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2><b>Ubicación</b></h2>
+                <P><b>Av. Periferico Sur #1298</b></P>
+                <p><b>Col. El pedregal, Del. Miguel Hildalgo</b></p>
+                <p><b>Ciudad de México C.P. 06880</b></p>
+                <p><b>Tel: (55) 1289 2837</b></p>
+                <p><b>Horario: Lunes a Domingo de 10am a 10pm</b></p>
+            </div>
+            <div class="box">
+                <h2>Redes Sociales</h2>
+                <div class="red-social">
+                    <a href="#"><img src="https://github.com/BernardoEspinoza02/HTML-Practica/blob/main/Imagenes/facebook.png?raw=true" alt="facebook" width="45" height="45"></a>
+                    <a href="#"><img src="https://github.com/BernardoEspinoza02/HTML-Practica/blob/main/Imagenes/insta.png?raw=true" alt="instagram" width="45" height="45"></a>
+                    <a href="#"><img src="https://github.com/BernardoEspinoza02/HTML-Practica/blob/main/Imagenes/twitter.png?raw=true" alt="twitter" width="45" height="45"></a>
+                    <a href="mailto:benleo02@gmail.com"><img src="https://github.com/BernardoEspinoza02/HTML-Practica/blob/main/Imagenes/mail.png?raw=true" alt="mail" width="45" height="45"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo2">    
+            <small>&copy;2022 <b>by BERKA </b>- Todos los derechos resevados.</small>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Formulario</title>
+<link rel="icon" href="https://github.com/BernardoEspinoza02/HTML-Practica/blob/main/Imagenes/Logo.png?raw=true">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body{
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        margin: 0px;
+    }
+
+
+    /*Estitlo de encabezado*/
+    a{
+        text-decoration: none;
+        color:#242e81;
+        align-items: baseline;      
+    }
+
+    header {
+        display: flex;
+        height: 200px;
+        background-color:#df68d5;
+        justify-content:flex-start;
+        align-items:center;
+        padding:10px;/*es el espacio en el marco de los elementos*/
+        margin: 0 auto;
+        text-align: center;
+        color:rgb(255, 255, 255);
+    }
+
+    .logo{
+        display: flex;
+    }
+
+    .logo img{
+        height: 170px;
+        margin-right: 300px;
+
+    }
+
+    nav a{
+        font-size: 17px; 
+        font-weight: 800;
+        padding-right: 90px;
+    }
+
+    nav a:hover{
+        color:rgb(83, 23, 23); 
+    }
+
+    h1{
+        font-size: 35px;
+        color: #59006b;
+        text-align: center;
+    }
+
+/*color cuando pasa el mause sobre imagenes con hypervinculo*/
+div.tamano{
+        margin: 10px;
+        border: 2px solid #3d3d3d;
+        border-radius: 8px;
+        float: left;
+        width: 90%;
+        height: auto;
+        background-color: #b862b175;
+
+    }
+    div.tamano {
+        padding: 10px;
+        text-align:left;
+        font-size: 25px;
+        color: #242e81;
+    }
+
+    div.Sabores {
+        margin: 10px;
+        border: 2px solid #3d3d3d;
+        border-radius: 8px;
+        float: left;
+        width: 30%;
+        height: 300px;
+        background-color: #b862b175;
+    }
+
+    div.Sabores {
+        padding: 10px;
+        text-align:left;
+        font-size: 25px;
+        color: #242e81;
+    }
+
+
+    div.cobertura{
+        margin: 10px;
+        border: 2px solid #3d3d3d;
+        border-radius: 8px;
+        float: left;
+        width: 30%;
+        height: 300px;
+        background-color: #b862b175;
+
+    }
+    div.cobertura {
+        padding: 10px;
+        text-align:left;
+        font-size: 25px;
+        color: #242e81;
+    }
+
+
+
+    /*Creacion de los espacios*/
+
+/*lado derecho de la pagina*/
+
+    /*stylo del pie de pagina*/
+    footer{
+       /* background-color: darkgreen;*/
+        padding: 5px;
+        text-align: center;
+    }
+
+    .pie_pagina{
+        width: 100%;
+        background-color: #df68d5;
+    }
+
+    .pie_pagina .grupo1{
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        display:grid;
+        grid-template-columns:repeat(3, 1fr);/*divicion de tres columnas*/
+        grid-gap:50px;
+        padding: 10px 0px;
+
+    }
+
+    .pie_pagina .grupo1 .box figure{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+    }
+
+    .pie_pagina .grupo1 .box .figure img{
+        width: 100px;
+    }
+
+    .pie_pagina .grupo1 .box h2{
+        color: rgb(116, 29, 29);
+        margin-bottom: 30px;
+        font-size: 25px;
+    }
+
+    .pie_pagina .grupo1 .box p{
+        color:#dddddd;
+        margin-bottom: 10px;
+    }
+
+    .pie_pagina .grupo1 .red-social a{
+        display: inline-block;
+        text-decoration: none;
+        width: 40px;
+        height: 40px;
+        line-height: 45px;
+        color:aliceblue;
+        margin-right: 10px;
+        background-color: rgb(240, 10, 40);
+    }
+
+    .pie_pagina .grupo2{
+        background-color:#b862b1;
+        padding: 15px 10px;
+        text-align: center;
+        color: rgb(253, 253, 253);
+        }
+
+    .pie_pagina .grupo2 small{
+        font-size: 18px;
+    }
+
+
+
+/*hace que las columnas se apilen en un cambio de pantalla mas pequena*/
+@media (max-wigth: 600px) {
+    nav, article, header{
+        width: 100%;
+        height:auto;
+    }
+}
+</style>
+</head>
+<body background="https://raw.githubusercontent.com/BernardoEspinoza02/HTML-Practica/437cdeb9d7f1514e79d23457871d7d2104cc0a69/Imagenes/fondo.jpg">
+    <header>
+        <a href="#" class="logo">
+            <img src="https://github.com/BernardoEspinoza02/HTML-Practica/blob/main/Imagenes/Logo.png?raw=true" alt="logo">      
+        </a>
+        <p style="font-size: 100px;">El paraíso</p>
+<!--Encabezado-->
+    </header>
+    <hr color="#470542" size="6px">
+    <nav style="text-align: end;" color="#ffffff">
+        <a href=".\Pasteleria2.html">Inicio</a>|
+        <a href="#">Historia</a>|
+        <a href="C:\Users\BERNARDO\Desktop\Pasteleria\Formulario.html">Haslo tu mismo</a>|
+        <a href="#">Contato</a>
+    </nav>
+    <hr color="#470542" size="6px">
+
+
+    
+<h1>Arma tu Pastel</h1>
+    <div class="tamano">
+    <h2>Tamano del Pastel</h2>
+    <form action="pedido.js">
+        <input type="radio" id="chico" name="tamaño" value="chico">
+        <label for="chico">Chico (10 personas)</label><br>
+
+        <input type="radio" id="mediano" name="tamaño" value="mediano">
+        <label for="mediano">Mediano (25 personas)</label><br>
+        
+        <input type="radio" id="grande" name="tamaño" value="grande">
+        <label for="grande">Grande(45 personas)</label><br>
+    </div>
+    <div class="Sabores">
+    <h2>Sabor del Pan</h2>
+
+        <input type="radio" id="Chocolate" name="Sabor" value="Chocolate">
+        <label for="Chocolate">Chocolate </label><br>
+
+        <input type="radio" id="Vainilla" name="Sabor" value="Vainilla">
+        <label for="Vainilla">Vainilla</label><br>
+    
+        <input type="radio" id="FrutosRojos" name="Sabor" value="FrutosRojos">
+        <label for="FrutosRojos">Fruros Rojos</label><br>
+        
+        <input type="radio" id="Napolitano" name="Sabor" value="Napolitano">
+        <label for="Napolitano">Napolitano</label><br>
+    </div>
+
+    <div class="Sabores">
+
+        <h2>Sabor del Relleno</h2>
+
+        <input type="checkbox" id="Ferrero" name="Ferrero" value="Ferrero">
+        <label for="Ferrero">Ferrero</label><br>
+        
+        <input type="checkbox" id="fresa" name="fresa" value="fresa">
+        <label for="fresa">Fresa</label><br>
+
+        <input type="checkbox" id="Durazno" name="Durazno" value="Durazno">
+        <label for="Durazno">Durazno</label><br>
+
+        <input type="checkbox" id="Amareto" name="Amareto" value="Amareto">
+        <label for="Amareto">Amareto</label><br>
+
+        <input type="checkbox" id="Frambuesa" name="Frambuesa" value="Frambuesa">
+        <label for="Frambuesa">Frambuesa</label><br>
+    </div>
+    <div class="Sabores">   
+        <h2>Humedad del Pan</h2>
+
+        <input type="radio" id="Envinado" name="humedad" value="Envinado">
+        <label for="Envinado">Envinado</label><br>
+
+        <input type="radio" id="Cafe" name="humedad" value="Cafe">
+        <label for="Cafe">Cafe</label><br>
+        
+        <input type="radio" id="tresleches" name="tamaño" value="tresleches">
+        <label for="tresleches">Tres Leches</label><br>
+
+        <input type="radio" id="ninguno" name="humedad" value="ninguno">
+        <label for="ninguno">Ninguno</label><br>
+    </div>
+
+
+        <H1>Seleciona la cubierta</H1>
+
+    <div class="cobertura">
+     <h2>Coberturas</h2>
+
+
+
+        <input type="radio" id="chantilly" name="cobertura" value="chantilly">
+        <label for="chantilly">chantilly</label><br>
+
+        <input type="radio" id="Chocolate" name="cobertura" value="Chocolate">
+        <label for="Chocolate">Chocolate</label><br>
+        
+        <input type="radio" id="Fondan" name="cobertura" value="Fondan">
+        <label for="Fondan">Fondan</label><br>
+    </div>
+    <div class="cobertura">
+
+     <h2>Decoración</h2>
+
+
+
+        <input type="checkbox" id="FrutosRojos" name="FrutosRojos" value="FrutosRojos">
+        <label for="FrutosRojos">Frutos Rojos</label><br>
+        
+        <input type="checkbox" id="Cerezas" name="Cerezas" value="Cerezas">
+        <label for="Cerezas">Cerezas</label><br>
+
+        <input type="checkbox" id="Chocolateblanco" name="Chocolateblanco" value="Chocolateblanco">
+        <label for="Chocolateblanco">Chocolate Blanco</label><br>
+
+        <input type="checkbox" id="Galletas" name="Galletas" value="Galletas">
+        <label for="Galletas">Galletas</label><br>
+
+        <input type="checkbox" id="Chocolateobscuro" name="Chocolateobscuro" value="Chocolateobscuro">
+        <label for="Chocolateobscuro">Chocolate Obscuro</label><br>
+    </div>
+    <div class="cobertura">
+        <h2>Datos de Contacto</h2>
+
+        <label for="Nombre">Nombre(s)</label>
+        <input type="text" id="Nombre" name="Nombre" placeholder="Nombre"><br>
+
+        <label for="Apellido">Apellido</labe>
+        <input type="text" id="Apellido" name="Apellido" placeholder="Apellido"><br>
+
+        <label for="Telefo">Telefono</label>
+        <input type="tel"  id="Telfono" name="Telefono" placeholder="(55) 1234 1234"><br>
+
+        <label for="Correo">E-mail</label>
+        <input type="email" id="correo" name="Correo" placeholder="E-mail"><br>
+    </div>
+    
+
+   
+        <br><br>
+     <input  type="reset">
+     <input  type="submit">
+      <br><br>
+    </form>
+    </div>
+
+<!--Pie de pagina-->
+    <footer class="pie_pagina">
+        <div class="grupo1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="https://github.com/BernardoEspinoza02/HTML-Practica/blob/main/Imagenes/Logo.png?raw=true" alt="logo" width="150" height="150">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2><b>Ubicación</b></h2>
+                <P><b>Av. Periferico Sur #1298</b></P>
+                <p><b>Col. El pedregal, Del. Miguel Hildalgo</b></p>
+                <p><b>Ciudad de México C.P. 06880</b></p>
+                <p><b>Tel: (55) 1289 2837</b></p>
+            </div>
+            <div class="box">
+                <h2>Redes Sociales</h2>
+                <div class="red-social">
+                    <a href="#"><img src="https://github.com/BernardoEspinoza02/HTML-Practica/blob/main/Imagenes/facebook.png?raw=true" alt="facebook" width="45" height="45"></a>
+                    <a href="#"><img src="https://github.com/BernardoEspinoza02/HTML-Practica/blob/main/Imagenes/insta.png?raw=true" alt="instagram" width="45" height="45"></a>
+                    <a href="#"><img src="https://github.com/BernardoEspinoza02/HTML-Practica/blob/main/Imagenes/twitter.png?raw=true" alt="twitter" width="45" height="45"></a>
+                    <a href="mailto:benleo02@gmail.com"><img src="https://github.com/BernardoEspinoza02/HTML-Practica/blob/main/Imagenes/mail.png?raw=true" alt="mail" width="45" height="45"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo2">    
+            <small>&copy;2022 <b>by BERKA </b>- Todos los derechos resevados.</small>
+        </div>
+    </footer>
+
+</body>
+</html>

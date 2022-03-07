@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>El Paraiso</title>
+<link rel="icon" href="https://github.com/BernardoEspinoza02/HTML-Practica/blob/main/Imagenes/Logo.png?raw=true">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body{
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        margin: 0px;
+    }
+
+
+    /*Estitlo de encabezado*/
+    a{
+        text-decoration: none;
+        color:#242e81;
+        align-items: baseline;      
+    }
+
+    header {
+        display: flex;
+        height: 200px;
+        background-color:#df68d5;
+        justify-content:flex-start;
+        align-items:center;
+        padding:10px;/*es el espacio en el marco de los elementos*/
+        margin: 0 auto;
+        text-align: center;
+        color:rgb(255, 255, 255);
+    }
+
+    .logo{
+        display: flex;
+    }
+
+    .logo img{
+        height: 170px;
+        margin-right: 300px;
+
+    }
+
+    nav a{
+        font-size: 17px; 
+        font-weight: 800;
+        padding-right: 90px;
+    }
+
+    nav a:hover{
+        color:rgb(83, 23, 23); 
+    }
+
+
+    div.gallery {
+        
+        margin: 10px;
+        border: 2px solid #3d3d3d;
+        border-radius: 8px;
+        float: left;
+        width: 23%;
+    }
+/*color cuando pasa el mause sobre imagenes con hypervinculo*/
+    div.gallery:hover {
+        border: 1px solid #a30296;
+    }
+    
+    div.gallery img {
+        width: 100%;
+        height: 400px;
+    }
+
+    div.desc {
+        padding: 30px;
+        text-align: center;
+        font-size: 25px;
+        color: #242e81;
+    }
+
+
+
+    /*Creacion de los espacios*/
+    aside{
+
+        float:left;
+        width: 40%;
+        height: 410px;
+        background:rgba(117, 6, 207, 0.404);
+        justify-items: center;
+        padding:50px;
+        text-align: center;
+        color:#dddddd;
+        font-size:x-large;
+        
+    }
+/*lado derecho de la pagina*/
+    article {
+        float:left;
+        padding: 25px;
+        width: 60%;
+        align-items: center;
+        background:none;
+        height: auto;
+
+    }
+
+    /*limpiar columnas flotantes*/
+    section::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    /*Tablas de Presios y Sabores*/
+    table, th, td{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: rgb(110, 26, 26);
+        border: 1px solid rgba(255, 255, 255, 0.596);
+        border-radius: 10px;
+        
+
+    }
+    tr{
+        font-size: 20px;
+    }
+    th, td{
+        text-align: center;
+        background-color:#b862b18c;
+        border-radius: 10px;
+    }
+
+    h2{
+        color: rgb(110, 26, 26);
+    }
+
+
+
+    /*stylo del pie de pagina*/
+    footer{
+       /* background-color: darkgreen;*/
+        padding: 5px;
+        text-align: center;
+    }
+
+    .pie_pagina{
+        width: 100%;
+        background-color: #df68d5;
+    }
+
+    .pie_pagina .grupo1{
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        display:grid;
+        grid-template-columns:repeat(3, 1fr);/*divicion de tres columnas*/
+        grid-gap:50px;
+        padding: 10px 0px;
+
+    }
+
+    .pie_pagina .grupo1 .box figure{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+    }
+
+    .pie_pagina .grupo1 .box .figure img{
+        width: 100px;
+    }
+
+    .pie_pagina .grupo1 .box h2{
+        color: rgb(116, 29, 29);
+        margin-bottom: 30px;
+        font-size: 25px;
+    }
+
+    .pie_pagina .grupo1 .box p{
+        color:#dddddd;
+        margin-bottom: 10px;
+    }
+
+    .pie_pagina .grupo1 .red-social a{
+        display: inline-block;
+        text-decoration: none;
+        width: 40px;
+        height: 40px;
+        line-height: 45px;
+        color:aliceblue;
+        margin-right: 10px;
+        background-color: rgb(240, 10, 40);
+    }
+
+    .pie_pagina .grupo2{
+        background-color:#b862b1;
+        padding: 15px 10px;
+        text-align: center;
+        color: rgb(253, 253, 253);
+        }
+
+    .pie_pagina .grupo2 small{
+        font-size: 18px;
+    }
+
+
+
+/*hace que las columnas se apilen en un cambio de pantalla mas pequena*/
+@media (max-wigth: 600px) {
+    nav, article, header{
+        width: 100%;
+        height:auto;
+    }
+}
+</style>
+</head>
+<body background="https://raw.githubusercontent.com/BernardoEspinoza02/HTML-Practica/437cdeb9d7f1514e79d23457871d7d2104cc0a69/Imagenes/fondo.jpg">
+    <header>
+        <a href="#" class="logo">
+            <img src="https://github.com/BernardoEspinoza02/HTML-Practica/blob/main/Imagenes/Logo.png?raw=true" alt="logo">      
+        </a>
+        <p style="font-size: 100px;">El paraíso</p>
+<!--Encabezado-->
+    </header>
+    <hr color="#470542" size="6px">
+    <nav style="text-align: end;" color="#ffffff">
+        <a href="#">Inicio</a>|
+        <a target="_blank" href=".\Pastelero.html">Pastelero</a>|
+        <a href="C:\Users\BERNARDO\Desktop\Pasteleria\Formulario.html">Haslo tu mismo</a>|
+        <a href="#">Contato</a>
+    </nav>
+    <hr color="#470542" size="6px">
+
+    
+
+    <div class="gallery">
+        <a target="_blank" href=".\Formulario.html">
+            <img src="https://raw.githubusercontent.com/BernardoEspinoza02/HTML-Practica/3ce87690bf1dc3d351c4050d33c4a3c0273738fa/Imagenes/1.jpg" alt="5587" width="100" height="100">
+        </a>
+        <div class="desc">Rosa Pastel <b>$350</b>
+        </div>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href=".\Formulario.html">
+            <img src="https://raw.githubusercontent.com/BernardoEspinoza02/HTML-Practica/3ce87690bf1dc3d351c4050d33c4a3c0273738fa/Imagenes/4.jpg" alt="5588" width="100" height="100">
+        </a>
+        <div class="desc">Monte Cafe <b>$280</b></div>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href=".\Formulario.html">
+            <img src="https://raw.githubusercontent.com/BernardoEspinoza02/HTML-Practica/3ce87690bf1dc3d351c4050d33c4a3c0273738fa/Imagenes/2.jpg" alt="5588" width="100" height="100">
+        </a>
+        <div class="desc">Nube <b>$400</b></div>
+    </div>
+
+
+    <div class="gallery">
+        <a target="_blank" href=".\Formulario.html">
+            <img src="https://raw.githubusercontent.com/BernardoEspinoza02/HTML-Practica/3ce87690bf1dc3d351c4050d33c4a3c0273738fa/Imagenes/7.jpg" alt="5588" width="100" height="100">
+        </a>
+        <div class="desc">Napolitano <b>$350</b></div>
+    </div>
+
+<!--Texto enmedio-->
+    <section>
+        <aside>
+            <p aling="center"><b>La pasion y amor por las resposteria 
+                nos inspirara cada día a hornear los mejores 
+                y exquisitos pasteles, nuestros clientes quedan satisfechos.
+            </P>
+             
+            <P>Es por ello que inovamos cada día y le damos una dulce caria a su paladar, ¡Tenemos un pastel asu gusto!</P></b>
+        </aside>
+        <article>
+            <img src="https://github.com/BernardoEspinoza02/HTML-Practica/blob/main/Imagenes/8.jpg?raw=true", alt="restauran" width="100%" height="400">
+        </article>
+    </section>
+
+<!--Tablas de precios-->
+    <figure>
+        <h2>Lista Ingredidientes</h2>
+        <table>
+            <tr>
+                <th>Tamaño</th>
+                <th>Precio</th>
+            </tr>
+            <tr>
+                <td>Chico(10 personas)</td>
+                <td>$100</td>
+            </tr>
+            <tr>
+                <td>Mediano(25 personas)</td>
+                <td>$250</td>
+            </tr>
+            <tr>
+                <td>Grande(45 personas)</td>
+                <td>$350</td>
+            </tr>
+        </table>
+
+        <h2>Sabores base</h2>
+        <table style="width:100%">
+            <tr>
+                <th>Sabor Del Pan</th>
+                <th>Sabor Del Relleno</th>
+                <th>Humedad del Pan</th>
+            </tr>
+            <tr>
+                <td>
+                    <table style="width: 100%">
+                        <tr>
+                            <th>Sabor</th>
+                            <th>Precio</th>
+                        </tr>
+                        <tr>
+                            <td>Chocolate</td>
+                            <td>$10</td>
+                        </tr>
+                        <tr>
+                            <td>Vainilla</td>
+                            <td>$20</td>
+                        </tr>
+                        <tr>
+                            <td>Frutos Rojos</td>
+                            <td>$20</td>
+                        </tr>
+                        <tr>
+                            <td>Napolitano</td>
+                            <td>$20</td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <table style="width:100%">
+                        <tr>
+                            <th>Relleno</th>
+                            <th>Precio</th>
+                        </tr>
+                        <tr>
+                            <td>Ferrero</td>
+                            <td>$20</td>
+                        </tr>
+                        <tr>
+                            <td>fresa</td>
+                            <td>$20</td>
+                        </tr>
+                        <tr>
+                            <td>Durazno</td>
+                            <td>$15</td>
+                        </tr>
+                        <tr>
+                            <td>Amareto</td>
+                            <td>$15</td>
+                        </tr>
+                        <tr>
+                            <td>Frambuesa</td>
+                            <td>$15</td>
+                        </tr>
+                    </table>    
+                </td>
+                <td>
+                    <table style="width:100%">
+                        <tr>
+                            <th>Tipo</th>
+                            <th>Precio</th>
+                        </tr>
+                        <tr>
+                            <td>Cafe</td>
+                            <td>$20</td>
+                        </tr>
+                        <tr>
+                            <td>Envinado</td>
+                            <td>$20</td>
+                        </tr>
+                        <tr>
+                            <td>Tres Leches</td>
+                            <td>$20</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <h2>Coberturas</h2>
+        <table style="width:100%">
+            <tr>
+                <th>Cubierta</th>
+                <th>Decoracion</th>
+            </tr>
+            <tr>
+                <td>
+                    <table style="width: 100%">
+                        <tr>
+                            <th>Tipo</th>
+                            <th>Precio</th>
+                        </tr>
+                        <tr>
+                            <td>chantilly</td>
+                            <td>$10</td>
+                        </tr>
+                        <tr>
+                            <td>Chocolate</td>
+                            <td>$20</td>
+                        </tr>
+                        <tr>
+                            <td>Fondan</td>
+                            <td>$20</td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <table style="width:100%">
+                        <tr>
+                            <th>Adorno</th>
+                            <th>Precio</th>
+                        </tr>
+                        <tr>
+                            <td>Frutos Rojos</td>
+                            <td>$20</td>
+                        </tr>
+                        <tr>
+                            <td>Cerezas</td>
+                            <td>$20</td>
+                        </tr>
+                        <tr>
+                            <td>Chocolate Blanco</td>
+                            <td>$15</td>
+                        </tr>
+                        <tr>
+                            <td>Galletas</td>
+                            <td>$15</td>
+                        </tr>
+                        <tr>
+                            <td>Chocolate Obscuro</td>
+                            <td>$15</td>
+                        </tr>
+                    </table>    
+                </td>
+            </tr>
+        </table>
+    </figure>
+    <a href="C:/Users/BERNARDO/Desktop/Pasteleria/Formulario.html">
+    <input type="button" value="Arma tu Pastel">
+    </a>
+    <br></br>
+    <!--Pie de pagina-->
+    <footer class="pie_pagina">
+        <div class="grupo1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="https://github.com/BernardoEspinoza02/HTML-Practica/blob/main/Imagenes/Logo.png?raw=true" alt="logo" width="150" height="150">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2><b>Ubicación</b></h2>
+                <P><b>Av. Periferico Sur #1298</b></P>
+                <p><b>Col. El pedregal, Del. Miguel Hildalgo</b></p>
+                <p><b>Ciudad de México C.P. 06880</b></p>
+                <p><b>Tel: (55) 1289 2837</b></p>
+                <p><b>Horario: Lunes a Domingo de 10am a 10pm</b></p>
+            </div>
+            <div class="box">
+                <h2>Redes Sociales</h2>
+                <div class="red-social">
+                    <a href="#"><img src="https://github.com/BernardoEspinoza02/HTML-Practica/blob/main/Imagenes/facebook.png?raw=true" alt="facebook" width="45" height="45"></a>
+                    <a href="#"><img src="https://github.com/BernardoEspinoza02/HTML-Practica/blob/main/Imagenes/insta.png?raw=true" alt="instagram" width="45" height="45"></a>
+                    <a href="#"><img src="https://github.com/BernardoEspinoza02/HTML-Practica/blob/main/Imagenes/twitter.png?raw=true" alt="twitter" width="45" height="45"></a>
+                    <a href="mailto:benleo02@gmail.com"><img src="https://github.com/BernardoEspinoza02/HTML-Practica/blob/main/Imagenes/mail.png?raw=true" alt="mail" width="45" height="45"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo2">    
+            <small>&copy;2022 <b>by BERKA </b>- Todos los derechos resevados.</small>
+        </div>
+    </footer>
+</body>
+</html>
